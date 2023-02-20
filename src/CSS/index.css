@@ -29,18 +29,6 @@ h2 { font-size: 3rem; }
     height: 100vh;
 }
 
-/* HEADER */
-header { background-color: var(--rojo);}
-
-header h1 {
-    padding: 3rem 0;
-    margin: 0;
-    color: var(--beige);
-    text-align: center;
-    text-transform: uppercase;
-}
-/* HEADER */
-
 .sombra {
     box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
     -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
@@ -64,8 +52,20 @@ header h1 {
     transform: translateY(5rem);
 }
 
-.dos-columnas { flex-direction: column; }
-.dos-columnas :first-child { margin-bottom: 4rem; }
+.dos-columnas, .control { flex-direction: column; }
+.dos-columnas :first-child, .control :first-child { margin-bottom: 4rem; }
+
+/* HEADER */
+header { background-color: var(--rojo);}
+
+header h1 {
+    padding: 3rem 0;
+    margin: 0;
+    color: var(--beige);
+    text-align: center;
+    text-transform: uppercase;
+}
+/* HEADER */
 
 
 
@@ -75,19 +75,16 @@ header h1 {
     margin: 0 auto;
     padding: 10rem 0;
 }
-
 .formulario .campo {
     display: grid;
     margin-bottom: 2rem;
 }
-
 .formulario label {
     color: black;
     font-size: 2.8rem;
     text-align: center;
     margin-bottom: 2rem;
 }
-
 .formulario input[type="text"], .formulario input[type="number"] {
     background-color: var(--beigeOscuro);
     border-radius: 1rem;
@@ -96,7 +93,6 @@ header h1 {
     flex: 1;
     font-size: 1rem;
 }
-
 .formulario input[type="submit"] {
     background-color: var(--verde);
     border: none;
@@ -111,7 +107,6 @@ header h1 {
     width: 100%;
     cursor: pointer;
 }
-
 .alerta {
     padding: 2rem 5rem;
     max-width: 60rem;
@@ -149,6 +144,8 @@ header h1 {
 
 
 
+
+
 /* CONTROL */
 .control {
     width: 100%;
@@ -159,12 +156,27 @@ header h1 {
     font-size: 2.4rem;
     text-align: center;
 }
+.control { flex-direction: column; }
+.control :first-child { margin-bottom: 4rem; }
+
 
 @media (min-width: 768px) {
     .control p {
         text-align: left;
     }
+    .dos-columnas {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+    .dos-columnas > div {
+        width: 50%;
+    }
+    .dos-columnas :first-child {
+        margin-bottom: 0;
+    }
 }
+
 .control p.negativo,
 .control p.negativo span {
     color: red;
@@ -174,6 +186,7 @@ header h1 {
     color: rgb(137, 137, 209);
 }
 /* CONTROL */
+
 
 
 @media (min-width: 768px) {
@@ -187,19 +200,7 @@ header h1 {
         padding: 1rem 5rem;
     }
 
-    .dos-columnas {
-        flex-direction: row;
-        align-items: center;
-        gap: 4rem;
-    }
 
-    .dos-columnas > div {
-        width: 50%;
-    }
-
-    .dos-columnas :first-child {
-        margin-bottom: 0;
-    }
 }
 
 
