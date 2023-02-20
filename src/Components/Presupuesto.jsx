@@ -1,7 +1,7 @@
 import {Children, React, useState} from 'react';
 import Mensaje from './Mensaje';
 
-export default function Presupuesto({presupuesto, setPresupuesto}) {
+export default function Presupuesto({presupuesto, setPresupuesto, setIsValid}) {
 
   const [mensaje, setMensaje] = useState ("");
   
@@ -15,6 +15,8 @@ export default function Presupuesto({presupuesto, setPresupuesto}) {
     }
     // Resetear mensaje
     setMensaje('')
+    // Cambia estado para ver el otro componente
+    setIsValid(true)
   }
 
   return (
