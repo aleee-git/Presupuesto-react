@@ -1,5 +1,6 @@
 import React from 'react';
 import Presupuesto from './Presupuesto';
+import Control from './Control';
 
 export default function Header({presupuesto, setPresupuesto, isValid, setIsValid}) {
   return (
@@ -8,7 +9,7 @@ export default function Header({presupuesto, setPresupuesto, isValid, setIsValid
 
       {/* Condicional para mostrar componente */}
       {isValid ? 
-      (<p>Control</p>) : 
+      (<Control presupuesto={presupuesto}/>) : 
       (<Presupuesto presupuesto={presupuesto} setPresupuesto={setPresupuesto} 
         setIsValid={setIsValid}/>)}
 
