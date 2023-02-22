@@ -363,11 +363,11 @@ main {
     transition-timing-function: ease-in;
     opacity: 0;
 }
-.modal label { color: var(--blanco); }
+.modal label { color: white; }
 
 body .modal { overflow: hidden; }
 
-.modal .formulario.animar {
+.modal .formulario.anima {
     position: relative;
     opacity: 1;
 }

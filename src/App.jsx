@@ -10,9 +10,18 @@ function App() {
   const [isValid, setIsValid] = useState(false);
 
   const [ventana, setVentana] = useState(false);
+  const [animarVentana, setAnimarVentana] = useState(false);
+  
 
   const handleGasto = () => {
     setVentana(true)
+
+    setTimeout(() => {
+      console.log("animando...")
+      setAnimarVentana(true);
+      // Despues de medio segundo mostrara la ventana
+    }, 500);
+
     console.log('diste click')
   }
 
@@ -25,7 +34,9 @@ function App() {
       {isValid && (<div className='nuevo-gasto'> <img src={icono} alt="Icono" onClick={handleGasto} /></div>)}
 
 
-      {ventana && <Ventana setVentana={setVentana}/>}
+      {ventana && <Ventana setVentana={setVentana} 
+      animarVentana={animarVentana}
+      setAnimarVentana={setAnimarVentana} />}
     </div>
 
 
